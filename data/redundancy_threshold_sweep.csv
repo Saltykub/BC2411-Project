@@ -1,0 +1,5 @@
+threshold,clusters,singletons,multi_resume,max_size
+0.7,492,484,8,2
+0.65,488,479,9,5
+0.6,479,466,13,9
+0.55,461,442,19,12
