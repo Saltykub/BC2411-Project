@@ -72,7 +72,10 @@ def main():
             st.session_state.logged_in = False
             st.session_state.user_email = ""
             st.session_state.active_user_email = ""
-            st.session_state.nav_page = "Company Dashboard"
+            st.session_state.job_description_dialog_open = False
+            st.session_state.pop("job_description_dialog_job_id", None)
+            st.session_state.pop("job_description_dialog_title", None)
+            st.session_state.pop("job_description_dialog_text", None)
             st.rerun()
 
     if page != "Job Workbench":
@@ -80,6 +83,10 @@ def main():
         st.session_state.pop("resume_dialog_candidate_name", None)
         st.session_state.pop("resume_dialog_resume_text", None)
         st.session_state.pop("resume_preview_len", None)
+        st.session_state.job_description_dialog_open = False
+        st.session_state.pop("job_description_dialog_job_id", None)
+        st.session_state.pop("job_description_dialog_title", None)
+        st.session_state.pop("job_description_dialog_text", None)
 
     if page == "Admin Overview" and is_admin:
         page_admin_overview(data, company_id)

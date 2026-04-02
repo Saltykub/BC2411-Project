@@ -31,8 +31,19 @@ def _clear_resume_dialog_state():
     st.session_state.pop("resume_dialog_job_id", None)
 
 
+def _clear_job_description_dialog_state():
+    st.session_state.job_description_dialog_open = False
+    st.session_state.pop("job_description_dialog_job_id", None)
+    st.session_state.pop("job_description_dialog_title", None)
+    st.session_state.pop("job_description_dialog_text", None)
+
+
 def _resume_dialog_context(method: str, dept: str, job_id: int) -> tuple[str, str, int]:
     return method, dept, job_id
+
+
+def _job_description_context(job_id: int) -> int:
+    return job_id
 
 
 @st.dialog("Resume Preview", width="large")
@@ -65,6 +76,28 @@ def _show_resume_dialog():
         st.rerun()
 
 
+@st.dialog("Job Description", width="large")
+def _show_job_description_dialog():
+    title = st.session_state.get("job_description_dialog_title", "Job Description")
+    text = st.session_state.get("job_description_dialog_text", "Job description not available.")
+    st.markdown(
+        '<div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.35rem;">'
+        f'{_lucide_icon("file-text")}'
+        f'<strong>{title}</strong></div>',
+        unsafe_allow_html=True,
+    )
+    st.text_area(
+        "Job description",
+        value=text,
+        height=420,
+        disabled=False,
+        label_visibility="collapsed",
+    )
+    if st.button("Close", key="close_job_description_dialog", type="primary", use_container_width=True):
+        _clear_job_description_dialog_state()
+        st.rerun()
+
+
 def page_job_workbench(data: dict, company_id: int, is_admin: bool):
     company_jobs = data["job_df"][data["job_df"]["company_id"] == company_id]
 
@@ -92,7 +125,27 @@ def page_job_workbench(data: dict, company_id: int, is_admin: bool):
     with col_b:
         job_id = st.selectbox("Role", dept_jobs["job_id"].tolist(), format_func=lambda jid: role_labels.get(jid, str(jid)), key="wb_role")
 
-    method = st.radio("Method", ["MILP", "Greedy", "ScoreOnly"], horizontal=True, key="wb_method")
+    job_row = data["job_df"][data["job_df"]["job_id"] == job_id].iloc[0]
+
+    method_col, desc_col = st.columns([1, 1])
+    with method_col:
+        method = st.radio("Method", ["MILP", "Greedy", "ScoreOnly"], horizontal=True, key="wb_method")
+    with desc_col:
+        job_desc = ""
+        for desc_col_name in ["text_raw", "text_clean", "text_no_stop"]:
+            desc_val = job_row.get(desc_col_name, "")
+            if isinstance(desc_val, str) and desc_val.strip():
+                job_desc = desc_val.strip()
+                break
+        if not job_desc:
+            job_desc = "Job description not available."
+        desc_button_label = "View Job Description"
+        if st.button(desc_button_label, key=f"job_desc_btn_{job_id}", use_container_width=True):
+            st.session_state.job_description_dialog_title = role_labels.get(job_id, str(job_id))
+            st.session_state.job_description_dialog_text = job_desc
+            st.session_state.job_description_dialog_job_id = job_id
+            st.session_state.job_description_dialog_open = True
+            st.rerun()
 
     current_context = _resume_dialog_context(method, dept, job_id)
     saved_context = (
@@ -103,9 +156,11 @@ def page_job_workbench(data: dict, company_id: int, is_admin: bool):
     if st.session_state.get("resume_dialog_open") and saved_context != current_context:
         _clear_resume_dialog_state()
 
+    if st.session_state.get("job_description_dialog_open") and st.session_state.get("job_description_dialog_job_id") != _job_description_context(job_id):
+        _clear_job_description_dialog_state()
+
     sel_df = data["methods"].get(method, pd.DataFrame())
     job_sel = sel_df[sel_df["job_id"] == job_id].sort_values("pair_score", ascending=False) if not sel_df.empty else pd.DataFrame()
-    job_row = data["job_df"][data["job_df"]["job_id"] == job_id].iloc[0]
 
     req_skills = job_row["required_skills"] if isinstance(job_row["required_skills"], list) else []
     st.markdown(f'<div class="section-panel"><strong>Required Skills:</strong><br>{pills_html(req_skills, "blue")}</div>', unsafe_allow_html=True)
@@ -238,3 +293,6 @@ def page_job_workbench(data: dict, company_id: int, is_admin: bool):
 
     if st.session_state.get("resume_dialog_open"):
         _show_resume_dialog()
+
+    if st.session_state.get("job_description_dialog_open"):
+        _show_job_description_dialog()
