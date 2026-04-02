@@ -17,8 +17,8 @@ def main():
     st.set_page_config(page_title=APP_TITLE, page_icon=APP_ICON, layout="wide", initial_sidebar_state="expanded")
     inject_css()
 
-    st.session_state.setdefault("logged_in", True)
-    st.session_state.setdefault("user_email", "mia.chen@apexdigital.com")
+    st.session_state.setdefault("logged_in", False)
+    st.session_state.setdefault("user_email", "")
     st.session_state.setdefault("actions", {})
     st.session_state.setdefault("nav_page", "Company Dashboard")
     st.session_state.setdefault("company_scope", 0)
