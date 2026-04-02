@@ -57,7 +57,7 @@ def _show_resume_dialog():
         "Resume text",
         value=resume_text[:preview_chars],
         height=420,
-        disabled=True,
+        disabled=False,
         label_visibility="collapsed",
     )
     if st.button("Close", key="close_resume_dialog", type="primary", use_container_width=True):
