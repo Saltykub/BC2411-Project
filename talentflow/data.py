@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import re
 import json
+from html import unescape
 
 import numpy as np
 import pandas as pd
@@ -18,6 +20,31 @@ def _parse_json(val):
         return json.loads(str(val))
     except Exception:
         return []
+
+
+def _format_resume_text(text: object) -> str:
+    if not isinstance(text, str) or not text.strip():
+        return "Resume text not available."
+
+    cleaned = unescape(text)
+    cleaned = re.sub(r"<[^>]+>", "", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+
+    # Restore readable structure for flattened resume blobs.
+    cleaned = re.sub(r"\s*•\s*", "\n• ", cleaned)
+    section_markers = [
+        "Work Experience",
+        "Education",
+        "Military Service",
+        "Additional Information",
+        "Skills",
+    ]
+    for marker in section_markers:
+        cleaned = re.sub(rf"\s*({re.escape(marker)})\s*", rf"\n\n\1\n", cleaned, flags=re.IGNORECASE)
+
+    cleaned = re.sub(r"\s*([.!?])\s+", r"\1\n", cleaned)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned).strip()
+    return cleaned
 
 
 @st.cache_data(show_spinner="Loading platform data …")
@@ -39,12 +66,12 @@ def load_data():
 
     resume_df["candidate_name"] = resume_df["resume_id"].apply(candidate_name)
 
-    if "text_clean" in resume_df.columns:
-        resume_df["_resume_text"] = resume_df["text_clean"]
-    elif "text_raw" in resume_df.columns:
-        resume_df["_resume_text"] = resume_df["text_raw"]
+    if "text_raw" in resume_df.columns:
+        resume_df["_resume_text"] = resume_df["text_raw"].apply(_format_resume_text)
+    elif "text_clean" in resume_df.columns:
+        resume_df["_resume_text"] = resume_df["text_clean"].apply(_format_resume_text)
     elif "text_no_stop" in resume_df.columns:
-        resume_df["_resume_text"] = resume_df["text_no_stop"]
+        resume_df["_resume_text"] = resume_df["text_no_stop"].apply(_format_resume_text)
     else:
         resume_df["_resume_text"] = "Resume text not available in the sample data."
 

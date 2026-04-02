@@ -97,7 +97,7 @@ def inject_css():
     .tf-score-value { color: #2563eb; }
     .tf-muted { color: #9ca3af; font-size: 0.82rem; }
 
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
         .metric-card {
             background: #0f172a; border-color: #334155;
             box-shadow: 0 4px 16px rgba(0,0,0,0.35);

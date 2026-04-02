@@ -53,7 +53,13 @@ def _show_resume_dialog():
         f'<strong>{candidate_name}</strong></div>',
         unsafe_allow_html=True,
     )
-    st.text(resume_text[:preview_chars])
+    st.text_area(
+        "Resume text",
+        value=resume_text[:preview_chars],
+        height=420,
+        disabled=True,
+        label_visibility="collapsed",
+    )
     if st.button("Close", key="close_resume_dialog", type="primary", use_container_width=True):
         _clear_resume_dialog_state()
         st.rerun()
