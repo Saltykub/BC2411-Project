@@ -5,11 +5,14 @@ description = "Resume-to-job shortlisting project using notebook analysis, scori
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    "ipykernel==6.29.5",
     "matplotlib==3.9.2",
     "numpy==2.4.0",
     "pandas==2.2.3",
+    "plotly>=5.18.0",
     "scikit-learn==1.5.2",
-    "streamlit",
+    "scipy>=1.11.0",
+    "streamlit>=1.32,<1.40",
 ]
 
 [project.optional-dependencies]
