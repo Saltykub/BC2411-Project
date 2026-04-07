@@ -1,0 +1,133 @@
+job_id,job_title,job_text_snippet,job_text_raw,required_skills,selected_count,mean_selected_score,budget_used,budget_slack,budget_utilisation,selected_coverage,topk_score_coverage,coverage_gain_vs_topk,selected_resume_ids,topk_score_resume_ids,excluded_topk_resume_ids,selected_beyond_topk_resume_ids,selected_covered_skills,topk_score_covered_skills,selected_missing_required_skills,topk_missing_required_skills,high_score_not_selected,time_budget_tight,skill_tradeoff,selected_equals_topk,case_explanation,case_type,case_label
+20,Django Developer,"Job Responsibilities : - Lead a team of Python analytics and application developers - Be responsible for Analytics and Data Science App development using Python, Django and other compatible languages - Integrate Python application with other applications at client side (for example, booking engine, channel manager, property management system, etc.) - Perform ad-hoc analysis to solve business needs relating to pricing, assortment, inventory, display, and personalization - Prepare project plans, i...","Job Responsibilities :
+- Lead a team of Python analytics and application developers
+- Be responsible for Analytics and Data Science App development using Python, Django and other compatible languages
+- Integrate Python application with other applications at client side (for example, booking engine, channel manager, property management system, etc.)
+- Perform ad-hoc analysis to solve business needs relating to pricing, assortment, inventory, display, and personalization
+- Prepare project plans, identify milestones, and ensure that timelines and deliverables are being met or bettered (Travel may be required)
+- Carry out scenario planning, risk assessment and business (revenue) projections to provide a comprehensive assessment to clients
+- Identify data requirements and use Excel and/or statistical packages to build descriptive, explanatory, predictive and prescriptive models that deliver actionable insights
+- Prepare presentations, solution documents and data files as required
+- Prepare case studies and white papers to demonstrate how Sciative Solutions delivers superior value to clients businesses
+Desired candidate profile :
+- Winning attitude with an ability to deal with ambiguity, and quickly grasp new techniques, business problems and solution frameworks / technologies.
+- Minimum 1 year experience using Python at work for analytics and/or web application is a must. Overall 1 to 4 years of work experience.
+- Qualification: BE/BTech or ME/MTech in Engineering.
+- Demonstrated hands-on experience of formulating a problem statement, preparing a project plan, and developing and delivering solutions.
+- Business acumen, and proficiency in analysing and synthesizing data.
+- Experience or application familiarity with statistical techniques such as linear and logistic regression, clustering, segmentation, time series, forecasting, SVM, neural nets, is highly preferred.
+- High degree of proficiency in SQL and No-SQL Databases, and Excel + VBA.
+Expected Start Date: 14/12/2020
+Job Types: Full-time, Walk-In
+Salary: ₹30,000.00 per month
+Benefits:
+Cell phone reimbursement
+Paid sick time
+Schedule:
+Morning shift
+Supplemental Pay:
+Joining bonus
+Performance bonus
+Experience:
+total work: 4 years (Preferred)
+Python: 3 years (Preferred)
+Education:
+Bachelor's (Preferred)
+Location:
+Navi Mumbai, Maharashtra (Preferred)","['django', 'excel', 'python', 'sql']",5,0.703855870970439,56.72949999999999,8.270500000000013,0.8727615384615383,1.0,1.0,0.0,"[118, 442, 433, 205, 268]","[118, 442, 433, 205, 268]",[],[],"['django', 'excel', 'python', 'sql']","['django', 'excel', 'python', 'sql']",[],[],0,0,0,1,MILP selected essentially the same set as simple top-k score ranking.,normal,Normal job
+42,JavaScript Developer,"Software Engineer Who are we? Every day, billions of transactions, calls and messages that hold the world’s communications fabric together run on systems that Amdocs has helped to create. Because we work with some of the largest and most innovative companies on the planet, our work makes an impact. Over the past four decades, we have continually reinvented ourselves, and as we keep moving into exciting new areas such as media, gaming, IoT, 5G, cloud services and more, there are always opportunit...","Software Engineer
+Who are we?
+Every day, billions of transactions, calls and messages that hold the world’s communications fabric together run on systems that Amdocs has helped to create.
+
+Because we work with some of the largest and most innovative companies on the planet, our work makes an impact. Over the past four decades, we have continually reinvented ourselves, and as we keep moving into exciting new areas such as media, gaming, IoT, 5G, cloud services and more, there are always opportunities for us to grow and develop. We will nurture your entrepreneurial instincts with open doors and promote your ability to seize the day. Our company is built of amazing people, a supportive atmosphere and a culture built on mutual support, respect and a “feel good factor” that can only happen in a workplace built by the kind of people that Amdocs employs.
+
+Make your career journey with us.
+In one sentence
+Responsible for design, develop, modify, debug and/or maintain software systems.
+
+Responsible for one or more specific modules within a large software system scope
+What will your job look like?
+You will design, develop, modify, debug and/or maintain software code according to functional, non-functional and technical design specifications.
+You will follow Amdocs software engineering standards, applicable software development methodology and release processes, to ensure code is maintainable, scalable , supportable and demo the software products to stakeholders
+You will investigate issues by reviewing/debugging code, provides fixes and workarounds, and reviews changes for operability to maintain existing software solutions.
+You will work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, work with cross functional teams to achieve goals.
+You will assume technical accountability for your specific work products within an application and provide technical support during solution design for new requirements.
+You will be encourage to actively look for innovation and continuous improvement, efficiency in all assigned tasks.
+All you need is...
+Bachelor's degree in Science/IT/Computer Science or equivalent
+1.5 to 3 years demonstrable experience with the HTML5, CSS, Java Script, React/Redux, nodejs Advance JavaScript, Typescript, Angular 2 .
+Experience of unit/integration/e2e testing with frontend projects.
+Exposure to REST paradigms and Domain/Resource modelling concepts and its integration with UI.
+Understanding of writing automated unit test cases using Mockito, Enzyme or any other UI testing suite
+Working knowledge of build tools/Jenkins, and source control (git/perforce)
+Why you will love this job:
+You will be challenged with design and develop new software applications
+You will have the opportunity to work in a growing organization, with ever growing opportunities for personal growth
+You will have the opportunity to work with the industry most advanced technologies
+
+Software Engineer","['angular', 'iot', 'jenkins', 'react', 'typescript']",5,0.7817745580223369,64.998,0.001999999999995339,0.9999692307692308,1.0,0.8,0.2,"[260, 253, 488, 468, 310]","[260, 409, 388, 34, 253]","[409, 388, 34]","[488, 468, 310]","['angular', 'iot', 'jenkins', 'react', 'typescript']","['angular', 'jenkins', 'react', 'typescript']",[],['iot'],1,1,1,0,"At least one high-score candidate was excluded, indicating a constraint-driven selection trade-off.",A_high_score_not_selected,Case A: high-score candidate excluded
+64,Node js developer,"Location: Pune Experience: 3+ years Requirements: • Strong Hands-on Experience on NodeJS. • Hands-on experience in writing Node JS Backend APIs and Microservices. • Should have relevant experience in MongoDB, Express JS, Angular JS, and Node JS. • Must have at least 3+ years. relevant experience in MEAN Stack development. • Strong knowledge of back-end programming languages such as JavaScript, TypeScript, and Node.js framework. • Experience on Express.js is an added advantage • Development exper...","Location: Pune
+
+Experience: 3+ years
+
+Requirements:
+
+• Strong Hands-on Experience on NodeJS.
+
+• Hands-on experience in writing Node JS Backend APIs and Microservices.
+
+• Should have relevant experience in MongoDB, Express JS, Angular JS, and Node JS.
+
+• Must have at least 3+ years. relevant experience in MEAN Stack development.
+
+• Strong knowledge of back-end programming languages such as JavaScript, TypeScript, and Node.js framework.
+
+• Experience on Express.js is an added advantage
+
+• Development experience for both mobile and desktop.
+
+• Database Experience in MongoDB, MySQL, PostgreSQL, SQLite.
+
+• Experience on HTML5, CSS3 and Bootstrap.
+
+• Excellent communication in written and spoken English.
+
+• Kindly share your resume along with your GitHub ID
+
+• Self Starter and should be able to work independently with minimal supervision.
+
+• Experience with billing systems is an added advantage.
+
+• Knowledge of Kubernetes, Docker is a very big plus.
+
+Job Type: Full-time
+
+Experience:
+NodeJs: 3 years (Required)
+Education:
+Bachelor's (Preferred)
+Location:
+Pune, Maharashtra (Preferred)
+Work Remotely:
+Temporarily due to COVID-19","['bootstrap', 'express', 'postgresql', 'sqlite', 'typescript']",5,0.7873971496613162,64.91749999999999,0.08250000000001023,0.9987307692307691,1.0,0.8,0.2,"[233, 478, 231, 331, 299]","[432, 190, 233, 478, 388]","[432, 190, 388]","[231, 331, 299]","['bootstrap', 'express', 'postgresql', 'sqlite', 'typescript']","['bootstrap', 'express', 'postgresql', 'typescript']",[],['sqlite'],1,1,1,0,"At least one high-score candidate was excluded, indicating a constraint-driven selection trade-off.",B_time_budget_tight,Case B: time budget tight
+49,Machine Learning,"Company: Qualcomm India Private Limited Job Area: Engineering Group, Engineering Group > Machine Learning Engineering Job Overview: Qualcomm is a company of inventors that unlocked 5G ushering in an age of rapid acceleration in connectivity and new possibilities that will transform industries, create jobs, and enrich lives. But this is just the beginning. It takes inventive minds with diverse skills, backgrounds, and cultures to transform 5Gs potential into world-changing technologies and produc...","Company:
+Qualcomm India Private Limited
+Job Area:
+Engineering Group, Engineering Group > Machine Learning Engineering
+Job Overview:
+
+
+Qualcomm is a company of inventors that unlocked 5G ushering in an age of rapid acceleration in connectivity and new possibilities that will transform industries, create jobs, and enrich lives. But this is just the beginning. It takes inventive minds with diverse skills, backgrounds, and cultures to transform 5Gs potential into world-changing technologies and products. This is the Invention Age - and this is where you come in.
+
+Join a dynamic team at Qualcomm focused on advancing state-of-the-art in Machine Learning applications. The team invents Machine Learning techniques that will change the way chips are designed, by reducing long-loop iterations and enabling deeper exploration of the chip design solution space. The candidate will be expected to work on identifying new opportunities to apply Machine Learning in chip design, exploring advanced ML solution techniques, developing/testing/tuning ML algorithms, and writing/deploying/supporting production-ready software to chip design teams.
+
+Minimum Qualifications
+An amazing team player most important!
+Expertise in Machine Learning theory and hands-on programming is a must
+Experience with advanced ML techniques (e.g., CNN, GNN, RNN, RL)
+Strong analytical and communication skills
+Familiarity with VLSI is a strong plus
+B. Tech, M. Tech or Ph.D. in CS/ECE, with 3-10 years experience after Bachelors degree
+Applicants: If you need an accommodation, during the application/hiring process, you may request an accommodation by sending email to accommodationsupport
+
+To all Staffing and Recruiting Agencies: Our Careers Site is only for individuals seeking a job at Qualcomm. Staffing and recruiting agencies and individuals being represented by an agency are not authorized to use this site or to submit profiles, applications or resumes, and any such submissions will be considered unsolicited. Qualcomm does not accept unsolicited resumes or applications from agencies. Please do not forward resumes to our jobs alias, Qualcomm employees or any other company location. Qualcomm is not responsible for any fees related to unsolicited resumes/applications.","['communication', 'cs', 'machine learning', 'testing']",5,0.5567474526328383,64.81859999999999,0.18140000000001066,0.9972092307692306,1.0,0.75,0.25,"[148, 59, 317, 69, 209]","[246, 148, 489, 111, 59]","[246, 489, 111]","[317, 69, 209]","['communication', 'cs', 'machine learning', 'testing']","['communication', 'machine learning', 'testing']",[],['cs'],1,1,1,0,"At least one high-score candidate was excluded, indicating a constraint-driven selection trade-off.",C_skill_tradeoff,Case C: skill coverage trade-off
