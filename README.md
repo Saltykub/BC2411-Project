@@ -86,13 +86,6 @@ The workflow covers:
 ├─ .gitattributes
 └─ .gitignore
 ```
----
-
-## Data Inputs
-
-The workflow uses data files stored in the `data/` folder.
-
-
 
 ---
 
@@ -145,14 +138,14 @@ Implements the optimisation model, baselines, and results analysis.
 
 Studies how structural parameters affect shortlist performance and feasibility.
 
--- 
+---
 
 ## How to Run
 
 ### 1. Clone the repository
 
 ```shell
-git clone <your-repository-url>
+git clone <https://github.com/Saltykub/BC2411-Project.git>
 cd BC2411-Project
 git lfs pull
 ```
@@ -188,6 +181,7 @@ Then open and run these notebooks in order:
 3. `02_Scoring_MILP_Results.ipynb`
 4. `03_Sensitivity_Analysis.ipynb`
 
+--- 
 ## Recommended Execution Order
 
 ```text
