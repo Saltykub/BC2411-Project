@@ -145,7 +145,7 @@ Studies how structural parameters affect shortlist performance and feasibility.
 ### 1. Clone the repository
 
 ```shell
-git clone <https://github.com/Saltykub/BC2411-Project.git>
+git clone https://github.com/Saltykub/BC2411-Project.git
 cd BC2411-Project
 git lfs pull
 ```
