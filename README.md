@@ -126,6 +126,8 @@ Contains the Streamlit page-level views for different user flows and scenarios.
 
 Builds the consolidated resume dataset from raw text files.
 
+**Note**: Due to the large size of the raw text files, they were not uploaded. This notebook does not need to be re-run.
+
 ### `01_DataCleaning_EDA.ipynb`
 
 Handles preprocessing, extraction, feature engineering, and exploratory analysis.
@@ -176,10 +178,9 @@ jupyter notebook
 
 Then open and run these notebooks in order:
 
-1. `00_Data_Preprocessing.ipynb`
-2. `01_DataCleaning_EDA.ipynb`
-3. `02_Scoring_MILP_Results.ipynb`
-4. `03_Sensitivity_Analysis.ipynb`
+1. `01_DataCleaning_EDA.ipynb`
+2. `02_Scoring_MILP_Results.ipynb`
+3. `03_Sensitivity_Analysis.ipynb`
 
 --- 
 ## Recommended Execution Order
@@ -189,10 +190,9 @@ Then open and run these notebooks in order:
 2. Pull Git LFS files
 3. Create and activate virtual environment
 4. Install dependencies
-5. Run 00_Data_Preprocessing.ipynb
-6. Run 01_DataCleaning_EDA.ipynb
-7. Run 02_Scoring_MILP_Results.ipynb
-8. Run 03_Sensitivity_Analysis.ipynb
-9. Run streamlit run app.py
+5. Run 01_DataCleaning_EDA.ipynb
+6. Run 02_Scoring_MILP_Results.ipynb
+7. Run 03_Sensitivity_Analysis.ipynb
+8. Run streamlit run app.py
 ```
 
